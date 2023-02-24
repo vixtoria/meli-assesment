@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ProductSearchResponse: Codable {
+struct ProductSearchResponse: Codable {
     var results: [Product]?
     
     enum CodingKeys : String, CodingKey {

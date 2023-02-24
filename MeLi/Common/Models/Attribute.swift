@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Attribute: Codable {
+struct Attribute: Codable {
     
     var id: String?
     var name: String?

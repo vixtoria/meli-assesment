@@ -15,7 +15,6 @@ class MainViewController: BaseViewController {
 
     var page: Int = 0
     var isLastPage: Bool = false
-//    var isEmptyResults: Bool = false
 
     private var products: [Product] = [] {
         didSet {
@@ -44,6 +43,7 @@ class MainViewController: BaseViewController {
     
     //MARK: - Methods
     func loadMore() {
+        if isLastPage { return }
         page+=1
         self.presenter?.getProducts(query: searchTextField.text ?? "", page: page)
     }
@@ -54,6 +54,7 @@ class MainViewController: BaseViewController {
     
     //MARK: - Actions
     @IBAction func searchFieldChanged(_ sender: Any) {
+        isLastPage = false
         page = 0
         hideLoading()
         self.presenter?.getProducts(query: searchTextField.text ?? "", page: page)
@@ -67,13 +68,20 @@ extension MainViewController: MainViewProtocol {
         if (page == 0) {
             products = []
         }
-        products.append(contentsOf: results)
+        
         hideSpinner()
+        if results.isEmpty {
+            isLastPage = true
+            hideLoading()
+            return
+        }
+        products.append(contentsOf: results)
     }
     
     func didFinishGettingProductsWithErrors(error: String) {
         if (page == 0) {
             products = []
+            hideLoading()
         }
         hideSpinner()
     }
