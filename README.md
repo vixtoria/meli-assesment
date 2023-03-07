@@ -1,3 +1,3 @@
-# MeLi Tech Assesment
+# MercadoLibre App
 
-This is a demo MercadoLibre Browsing app developed for a technical asessment.
+This is a demo MercadoLibre browsing application consuming de MeLi API.
