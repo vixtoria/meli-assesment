@@ -58,19 +58,6 @@ class ProductViewController: BaseViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
-    //MARK: - Methods
-//    func setup() {
-//        self.title = "Detalles"
-//
-////        let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-////        navigationItem.backBarButtonItem = backButton
-////        navigationItem.backButtonDisplayMode = .generic
-//
-//        let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-//        navigationItem.backBarButtonItem = backBarButtonItem
-//        navigationItem.backButtonTitle = ""
-//    }
-    
 }
 
 //MARK: - Protocols
@@ -93,19 +80,6 @@ extension ProductViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let section = ProductTableViewSection(rawValue: indexPath.section)!
-//
-//        switch section {
-//        case .HeaderSection:
-//            return 100
-//        case .PicturesSection:
-//            return 350
-//        case .DetailsSection:
-//            return 150
-//        }
-//    }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = ProductTableViewSection(rawValue: indexPath.section)!
@@ -135,16 +109,6 @@ extension ProductViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
     }
-
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let section = MainTableViewSection(rawValue: indexPath.section)
-//        if section == .EmptySection { return }
-//
-//        guard let productId = self.products[indexPath.row].id else {
-//            return
-//        }
-//        self.presenter?.presentProduct(id: productId)
-//    }
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return ProductTableViewSection.count

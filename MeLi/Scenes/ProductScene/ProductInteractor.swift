@@ -26,11 +26,9 @@ public class ProductInteractor: ProductInteractorProtocol {
                   
                 self.presenter?.didFinishGettingProduct(product: product)
             case .failure(let error):
-                print("Error")
-                print(error)
                 
                 if error == .noNetwork {
-                    self.presenter?.didFinishGettingProductWithErrors(error: "Please check your internet connection and try again")
+                    self.presenter?.didFinishGettingProductWithErrors(error: "Por favor revisa tu conexión y vuelve a intentarlo")
                 }
                 
                 self.presenter?.didFinishGettingProductWithErrors(error: "Algo salío mal, por favor inténtalo nuevamente.")

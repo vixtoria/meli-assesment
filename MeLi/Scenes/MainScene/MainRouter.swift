@@ -28,9 +28,6 @@ public class MainRouter: MainRouterProtocol {
     
     //MARK: - ShowProductDetail
     func showProductDetail(id: String) {
-        //let vc = DetailPostRouter.createModule() as! DetailPostViewController
-        //vc.postId = postId
-        //navController?.pushViewController(vc, animated: true)
         coordinator?.goToProduct(product: id)
     }
 }

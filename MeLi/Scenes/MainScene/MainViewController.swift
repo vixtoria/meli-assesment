@@ -57,6 +57,7 @@ class MainViewController: BaseViewController {
         isLastPage = false
         page = 0
         hideLoading()
+        tableView.setContentOffset(.zero, animated: false)
         self.presenter?.getProducts(query: searchTextField.text ?? "", page: page)
     }
 }

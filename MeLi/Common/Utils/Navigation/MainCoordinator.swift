@@ -12,9 +12,7 @@ class MainCoordinator: Coordinator {
     
     var rootViewController: UINavigationController
     var childsCoordinators: [Coordinator] = []
-    
-    //unowned let navigationController:UINavigationController
-    
+        
     init(navigationController: UINavigationController) {
         self.rootViewController = navigationController
         self.rootViewController.interactivePopGestureRecognizer?.isEnabled = false

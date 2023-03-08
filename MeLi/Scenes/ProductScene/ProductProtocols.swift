@@ -9,7 +9,7 @@ import Foundation
 
 //MARK: Router -
 protocol ProductRouterProtocol: AnyObject {
-//    func showProductDetail(id: String)
+
 }
 
 //MARK: Presenter -
@@ -20,7 +20,6 @@ protocol ProductPresenterProtocol: AnyObject {
     func didFinishGettingProduct(product: Product)
     func didFinishGettingProductWithErrors(error: String)
 
-//    func presentProduct(id: String)
 }
 
 //MARK: Interactor -

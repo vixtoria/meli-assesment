@@ -24,7 +24,6 @@ extension ProductsEndpoint: Endpoint {
         case .search(let site,_,_,_):
             return String(format: "sites/%@/search", arguments: [site])
         case .detail(_):
-//            return String(format: "%@/description", arguments: [item])
             return "items"
         }
     }

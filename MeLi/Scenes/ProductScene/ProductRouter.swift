@@ -26,17 +26,8 @@ public class ProductRouter: ProductRouterProtocol {
         
         return view
     }
-    
-//    //MARK: - ShowProductDetail
-//    func showProductDetail(id: String) {
-//        //let vc = DetailPostRouter.createModule() as! DetailPostViewController
-//        //vc.postId = postId
-//        //navController?.pushViewController(vc, animated: true)
-//        coordinator?.goToProduct(product: id)
-//    }
 }
 
 protocol ProductViewControllerDelegate: AnyObject {
     
-//    func goToProduct(product: String)
 }
